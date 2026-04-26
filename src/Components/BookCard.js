@@ -1,3 +1,5 @@
+import React from 'react';
+
 const BookCard = ({ title, year, genre }) => {
   return (
     <div className="BookCard">
