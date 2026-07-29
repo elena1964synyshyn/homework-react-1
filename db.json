@@ -1,16 +1,11 @@
 {
-  "contacts": [
-      {
-        "id": 1,
-        "name": "Harry",
-        "lastName": "Potter",
-        "about":"Lorem ipsum dolor sit amet, consecterun adip"
-      },
-      {
-        "id": 2,
-        "name": "Luke",
-        "lastName": "Skywalker",
-        "about":"Lorem ipsum dolor sit amet, consecterun adip"
-      }
-    ]
+  "todos": [
+    {
+      "id": 1,
+      "title": "Прочитати книгу",
+      "description": "lorem ipsum dolor sit amet",
+      "checked": false,
+      "creationDate": "2026-07-29"
+    }
+  ]
 }
