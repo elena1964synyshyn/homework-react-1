@@ -1,22 +1,19 @@
-const API_URL =
-  window.location.hostname === 'localhost'
-    ? 'http://localhost:3030/todos'
-    : '/api/todos';
+const BASE_URL = 'http://localhost:3001/todos';
 
 export const getTodos = async () => {
-  const response = await fetch(API_URL);
+  const response = await fetch(BASE_URL);
   if (!response.ok) throw new Error('Не вдалося отримати todo');
   return response.json();
 };
 
 export const getTodoById = async id => {
-  const response = await fetch(`${API_URL}/${id}`);
+  const response = await fetch(`${BASE_URL}/${id}`);
   if (!response.ok) throw new Error('Не вдалося отримати todo');
   return response.json();
 };
 
 export const addTodo = async todo => {
-  const response = await fetch(API_URL, {
+  const response = await fetch(BASE_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(todo),
@@ -27,7 +24,7 @@ export const addTodo = async todo => {
 };
 
 export const updateTodo = async (id, todo) => {
-  const response = await fetch(`${API_URL}/${id}`, {
+  const response = await fetch(`${BASE_URL}/${id}`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(todo),
@@ -38,7 +35,7 @@ export const updateTodo = async (id, todo) => {
 };
 
 export const deleteTodo = async id => {
-  const response = await fetch(`${API_URL}/${id}`, {
+  const response = await fetch(`${BASE_URL}/${id}`, {
     method: 'DELETE',
   });
 
