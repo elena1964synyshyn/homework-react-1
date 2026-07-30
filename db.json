@@ -1,11 +1,3 @@
 {
-  "todos": [
-    {
-      "id": 1,
-      "title": "Прочитати книгу",
-      "description": "lorem ipsum dolor sit amet",
-      "checked": false,
-      "creationDate": "2026-07-29"
-    }
-  ]
+  "todos": []
 }
