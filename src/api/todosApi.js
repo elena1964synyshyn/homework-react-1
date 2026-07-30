@@ -1,4 +1,7 @@
-const API_URL = 'http://localhost:3030/todos';
+const API_URL =
+  window.location.hostname === 'localhost'
+    ? 'http://localhost:3030/todos'
+    : '/api/todos';
 
 export const getTodos = async () => {
   const response = await fetch(API_URL);
